@@ -1,4 +1,4 @@
-# twitter-old-statuses
+# Old statuses
 The prototype functionality retrieve old tweets with php
 
 ### Requirements
@@ -10,6 +10,7 @@ The prototype functionality retrieve old tweets with php
 * composer install
 
 ### Simple usage template
-```php
+
+```sh
 php tweets.php --user=robotomize --since=2013-05-20 --until=2013-09-20 --count=10
 ```
