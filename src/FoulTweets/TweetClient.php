@@ -20,6 +20,7 @@ class TweetClient
     const TWITTER_REQ = 'https://twitter.com/i/search/timeline?f=realtime&q=%s&src=typd&max_position=%s';
 
     const TWITTER_URI = 'https://twitter.com';
+
     /**
      * @var Client
      */
@@ -166,9 +167,9 @@ class TweetClient
 
     /**
      * @param string $req
-     * @return mixed
+     * @return string
      */
-    private function response(string $req)
+    private function response(string $req): string
     {
         $request = $this->http->createRequest('GET', $req);
         $request->setHeader(
@@ -184,7 +185,7 @@ class TweetClient
     /**
      * @return Sequence
      */
-    public function getTweets()
+    public function getTweets(): Sequence
     {
         return $this->tweets;
     }

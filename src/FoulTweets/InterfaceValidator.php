@@ -11,7 +11,6 @@ interface InterfaceValidator
 {
     /**
      * @param InterfaceModel $model
-     * @return mixed
      */
     public static function validate(InterfaceModel $model);
 }
