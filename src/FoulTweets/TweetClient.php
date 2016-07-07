@@ -169,16 +169,14 @@ class TweetClient
      * @param string $req
      * @return string
      */
-    private function response(string $req): string
+    private function response(string $req)
     {
         $request = $this->http->createRequest('GET', $req);
         $request->setHeader(
             'User-Agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) 
             Gecko/20100316 Firefox/3.6.2'
         );
-
         $response = $this->http->send($request);
-
         return $response->json();
     }
 
